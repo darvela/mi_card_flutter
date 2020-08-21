@@ -12,48 +12,84 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.orange,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: 100.0,
-                color: Colors.red,
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/darvela.jpg'),
               ),
-              Container(
-                width: 55.0,
+              Text(
+                'Diego Rodríguez Vela',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 30.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              Container(
-                child: Column(children: [
-                  Container(
-                    height: 225.0,
+              Text(
+                'FLUTTER PROJECTS EXPERT',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 10.0,
+                  color: Colors.orange.shade100,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.orange,
                   ),
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.yellow,
+                  title: Text('+57 3133280728',
+                    style: TextStyle(
+                      color: Colors.orange.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                    ),
                   ),
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.green,
-                  ),Container(
-                    height: 225.0,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.orange,
                   ),
-                ],
+                  title: Text('darvela@gmail.com',
+                    style: TextStyle(
+                      color: Colors.orange.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                    ),
+                  ),
                 )
-              ),
-              Container(
-                width: 55.0,
-              ),
-              Container(
-                width: 100.0,
-                color: Colors.blue,
-              ),
-          ],
-        )),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
 }
+
+
+
+
+
+
+
